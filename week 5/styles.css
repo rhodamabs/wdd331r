@@ -1,0 +1,36 @@
+.card-grid {
+  width: 200px;
+  margin: 0px auto;
+  border: 1px solid brown;
+  padding: 10px; }
+
+.row-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em; }
+
+.col-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em; }
+
+div {
+  margin: 5px;
+  border: 1px solid black;
+  padding-bottom: 5px; }
+
+img {
+  width: 100%;
+  height: 85%; }
+
+h2 {
+  margin: 0;
+  text-align: center; }
+
+@media screen and (min-width: 600px) {
+  .card-grid {
+    width: 960px; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,96 @@
+$border-line: 1px solid #d0d0d0 ;
+$display-type: block;
+$header-fonts: 'Lora';
+$item-color:white;
+@mixin colors($item-color:white) {
+    color: $item-color;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    @include colors(#333);
+}
+nav {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-bottom: $border-line;
+    align-content: center;
+    ul li {
+        list-style: none;
+        display:$display-type;
+        padding:10px;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+
+a:link,  a:visited {
+   @include colors(#666);
+}
+ a:active{
+   @include colors(#DEB887);
+}
+ a:hover {
+  @include colors(#00ddff);
+}
+
+h1 a:link, h1 a:visited {
+   @include colors(#333);
+}
+h1 {
+    font-size: 4em;
+    border-bottom: $border-line ;
+    margin: 0;
+    h2 {
+    font-family: 'Lora';
+    padding: 10px;
+    }
+}
+.post-content {
+    display: flex;
+   width: min-content;
+   flex-direction: column;
+}
+p {
+    padding: 10px;
+}
+img {
+    width: 250px;
+}
+.post-date {
+    float: right;
+    font-size: 1.8em;
+    padding: 5px;
+    border-bottom: $border-line;
+}
+@media only screen and (min-width: 40em){
+    body {
+        width: 960px;
+        margin: 0 auto;
+    }
+  ul{
+        display: flex;
+        flex-direction: row-reverse;
+       
+    }
+    article{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+       
+    }
+    h1{
+        text-align: center;
+    }
+    .post-content{
+        display: $display-type;
+        align-items: center;
+        padding-left: 200px;
+        border-left: $border-line ; 
+        border-bottom: $border-line ; 
+    }
+    .post-date {
+        border-bottom:0;
+    }
+}
